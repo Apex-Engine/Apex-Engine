@@ -26,62 +26,62 @@
 #include "Apex/Commands/Commands.galaxy"
 #include "Apex/ApexUI/UI.galaxy"
 
-	libcrtx_write(PlayerGroupActive(), "Welcome to Apex v" + IntToString(libcrtx_version_major) + "." + IntToString(libcrtx_version_minor) + "." + IntToString(libcrtx_version_bugfix) + libcrtx_version_hotfix + ", with Apex Extensions v" +IntToString(libcrtx_frg_version_major) + "." + IntToString(libcrtx_frg_version_minor) + "." + IntToString(libcrtx_frg_version_bugfix) + libcrtx_frg_version_hotfix + ". Learn about Apex at ApexRP.com, or visit the reddit https://www.reddit.com/r/StarCraftRP/, \"Roleplaying\".");
+	libapex_write(PlayerGroupActive(), "Welcome to Apex v" + IntToString(libapex_version_major) + "." + IntToString(libapex_version_minor) + "." + IntToString(libapex_version_bugfix) + libapex_version_hotfix + ", with Apex Extensions v" +IntToString(libapex_frg_version_major) + "." + IntToString(libapex_frg_version_minor) + "." + IntToString(libapex_frg_version_bugfix) + libapex_frg_version_hotfix + ". Learn about Apex at ApexRP.com, or visit the reddit https://www.reddit.com/r/StarCraftRP/, \"Roleplaying\".");
 
-	bool libcrtx_MapCheck()
+	bool libapex_MapCheck()
 {
 	bool r = true;
 
 	if ( MeleeGetOption(1, c_meleeOptionDefeat || MeleeGetOption(1, c_meleeOptionVictory) ) {
-		libcrtx_write(PlayerGroupAll(), "Melee Trigger has been detected!");
+		libapex_write(PlayerGroupAll(), "Melee Trigger has been detected!");
 		 r = false;
 	}
 
-	if( PlayerType(libcrtx_setting_getint(libcrtx_setting_int_neutralcomputer)) != c_playerTypeNeutral ) {
-		libcrtx_write(PlayerGroupAll(), "Incorrect player settings for Neutral!");
+	if( PlayerType(libapex_setting_getint(libapex_setting_int_neutralcomputer)) != c_playerTypeNeutral ) {
+		libapex_write(PlayerGroupAll(), "Incorrect player settings for Neutral!");
 		r = false;
 	}
 
-	if( PlayerType(libcrtx_setting_getint(libcrtx_setting_int_hostilecomputer)) != c_playerTypeHostile ) {
-		libcrtx_write(PlayerGroupAll(), "Incorrect player settings for Hostile!");
+	if( PlayerType(libapex_setting_getint(libapex_setting_int_hostilecomputer)) != c_playerTypeHostile ) {
+		libapex_write(PlayerGroupAll(), "Incorrect player settings for Hostile!");
 		r = false;
 	}
 
-	if( PlayerType(libcrtx_setting_getint(libcrtx_setting_int_smarthostile)) != c_playerTypeComputer ) {
-		libcrtx_write(PlayerGroupAll(), "Incorrect player settings for Hostile!");
+	if( PlayerType(libapex_setting_getint(libapex_setting_int_smarthostile)) != c_playerTypeComputer ) {
+		libapex_write(PlayerGroupAll(), "Incorrect player settings for Hostile!");
 		r = false;
 	}
 
 	if( !r ) {
-		libcrtx_write(PlayerGroupAll(), "Some errors were detected. Apex has failed to startup.");
-		libcrtx_write(PlayerGroupAll(), "Engine Version: " + libcrtx_get_versionstring());
-		libcrtx_write_text(PlayerGroupAll(), StringToText("Please adjust your settings, or inform the author and or publisher of ") + GameMapName() );
+		libapex_write(PlayerGroupAll(), "Some errors were detected. Apex has failed to startup.");
+		libapex_write(PlayerGroupAll(), "Engine Version: " + libapex_get_versionstring());
+		libapex_write_text(PlayerGroupAll(), StringToText("Please adjust your settings, or inform the author and or publisher of ") + GameMapName() );
 	}
 
 	return r;
 }
 
-void libcrtx_InitLib()
+void libapex_InitLib()
 {
-	libcrtx_set_debug_mode(false);
+	libapex_set_debug_mode(false);
 
-	libcrtx_debug("Apex_init()");
+	libapex_debug("Apex_init()");
 
 	libactionbar_init();
 	libHash_InitLib();
 
-	libcrtx_settings_initdefault();
+	libapex_settings_initdefault();
 
 	if( libcrtx_MapCheck() ) {
-		libcrtx_toolkit_init();
-		libcrtx_admin_init();
-		libcrtx_events_init();
-		libcrtx_chat_init();
-		libcrtx_commands_init();
-		libcrtx_ui_init();
-		libcrtx_permissions_init();
+		libapex_toolkit_init();
+		libapex_admin_init();
+		libapex_events_init();
+		libapex_chat_init();
+		libapex_commands_init();
+		libapex_ui_init();
+		libapex_permissions_init();
 	}
 
-	libcrtx_Welcome();
+	libapex_Welcome();
 
 }
