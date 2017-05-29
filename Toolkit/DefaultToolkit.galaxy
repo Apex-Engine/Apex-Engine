@@ -3,11 +3,11 @@ include "Apex/Toolkit/DefaultToolkit/UnitToolkit.galaxy"
 include "Apex/Toolkit/DefaultToolkit/BehaviorToolkit.galaxy"
 include "Apex/Toolkit/DefaultToolkit/EffectToolkit.galaxy"
 
-void libcrtx_toolkit_default_init()
+void libapex_toolkit_default_init()
 {
-	libcrtx_toolkit_default_initweapons();
-	libcrtx_toolkit_default_initunittools();
-	libcrtx_toolkit_default_initrestrictedunits();
-	libcrtx_toolkit_default_initbehaviors();
-	libcrtx_toolkit_default_initeffects();
+	libapex_toolkit_default_initweapons();
+	libapex_toolkit_default_initunittools();
+	libapex_toolkit_default_initrestrictedunits();
+	libapex_toolkit_default_initbehaviors();
+	libapex_toolkit_default_initeffects();
 }
