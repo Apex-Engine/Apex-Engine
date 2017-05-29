@@ -1,0 +1,22 @@
+//=========================================================
+//		Apex Roleplay Engine
+//		Copyright (c) 2017 , Serobliss / @Joshykins
+//=========================================================
+// This software is distributed under the MIT License:
+// <http://opensource.org/licenses/MIT>
+//=========================================================
+
+include "apex/commands/general_commands.galaxy"
+include "apex/commands/admin_commands.galaxy"
+include "apex/commands/spawn_commands.galaxy"
+include "apex/commands/unit_commands.galaxy"
+include "apex/commands/actor_commands.galaxy"
+include "apex/commands/chat_commands.galaxy"
+include "apex/commands/region_commands.galaxy"
+include "apex/commands/debug_commands.galaxy"
+void libapex_commands_initialize() {
+  //admin
+  //general
+  //actor
+  //region
+}
