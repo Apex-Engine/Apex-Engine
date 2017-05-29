@@ -1,1 +1,14 @@
-
+bool libapex_command_ban(bool runConditions, bool runActions)
+  [
+    
+        int player;
+        unitgroup a;
+         string val = StringWord( libapex_chat_get_parse_line(EventPlayer()), 2);
+         player = libapex_color_to_player( val);
+         if( player == -1) {
+            return;
+         }
+if( !libapex_admin_haspermissions( EventPlayer(), player, libapex_admin_permissionlevel_moderator )) {
+		return true;
+	}
+  
