@@ -28,9 +28,9 @@
 
 	libapex_write(PlayerGroupActive(), "Welcome to Apex v" + IntToString(libapex_version_major) + "." + IntToString(libapex_version_minor) + "." + IntToString(libapex_version_bugfix) + libapex_version_hotfix + ", with Apex Extensions v" +IntToString(libapex_frg_version_major) + "." + IntToString(libapex_frg_version_minor) + "." + IntToString(libapex_frg_version_bugfix) + libapex_frg_version_hotfix + ". Learn about Apex at ApexRP.com, or visit the reddit https://www.reddit.com/r/StarCraftRP/, \"Roleplaying\".");
 
-	bool libapex_MapCheck()
+	void libapex_MapCheck()
 {
-	bool r = true;
+	void r = true;
 
 	if ( MeleeGetOption(1, c_meleeOptionDefeat || MeleeGetOption(1, c_meleeOptionVictory) ) {
 		libapex_write(PlayerGroupAll(), "Melee Trigger has been detected!");
