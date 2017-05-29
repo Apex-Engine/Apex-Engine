@@ -17,7 +17,7 @@
     <Element Type="CustomScript" Id="442602E1">
         <Name>Map Settings</Name>
         <ScriptCode>
-            void libcrtx_set_map_settings()
+            void libapex_set_map_settings()
             {
                 fixed min_scale;
                 fixed max_scale;
@@ -27,16 +27,16 @@
                 int spawn_timeout;
                 //====================Apex Info=======================
                 //enter the name of the terrainer within quotes (optional)
-                libcrtx_map_terrainer = "";
+                libapex_map_terrainer = "";
                 //==================GAME SETTINGS:=======================
                 //DO NOT EDIT SETTINGS UNLESS YOU KNOW WHAT YOU'RE DOING
                 //DO NOT EDIT LINES AFTER "//" (THESE ARE COMMENTS)
                 
                 //================General Game Settings:=================
                 //allow xml (true or false, can be changed ingame with !xml)
-                libcrtx_setting_use_xml = true;
+                libapex_setting_use_xml = true;
                 //default secure mode (true or false, can be changed ingame with !secure)
-                libcrtx_secure_mode = true;
+                libapex_secure_mode = true;
                 
                 //==================Command Settings:=====================
                 
@@ -59,12 +59,12 @@
                 cache_overwrite_check_limit = 15;
                 //=======================================================
                 //DO NOT EDIT THESE FUNCTIONS:
-                libcrtx_setting_setfixed(libcrtx_setting_fixed_minscale, min_scale);
-                libcrtx_setting_setfixed(libcrtx_setting_fixed_maxscale, max_scale);
-                libcrtx_setting_setint(libcrtx_setting_int_maxspawncount, max_spawn_count);
-                libcrtx_setting_setint(libcrtx_setting_int_maxspawnrate, max_spawn_rate_limit);
-                libcrtx_setting_setint(libcrtx_setting_int_spawnperiod, spawn_period);
-                libcrtx_setting_setint(libcrtx_setting_int_spawntimeout, spawn_timeout);
+                libapex_setting_setfixed(libapex_setting_fixed_minscale, min_scale);
+                libapex_setting_setfixed(libapex_setting_fixed_maxscale, max_scale);
+                libapex_setting_setint(libapex_setting_int_maxspawncount, max_spawn_count);
+                libapex_setting_setint(libapex_setting_int_maxspawnrate, max_spawn_rate_limit);
+                libapex_setting_setint(libapex_setting_int_spawnperiod, spawn_period);
+                libapex_setting_setint(libapex_setting_int_spawntimeout, spawn_timeout);
             }
         </ScriptCode>
     </Element>
@@ -369,7 +369,7 @@
         <Name></Name>
         <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000123"/>
         <ScriptCode>
-            libcrtx_InitLib();
+            libapex_InitLib();
         </ScriptCode>
     </Element>
     <Element Type="FunctionCall" Id="A334F3AE">
@@ -430,7 +430,7 @@
         <Name></Name>
         <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000123"/>
         <ScriptCode>
-            libcrtx_set_map_settings();
+            libapex_set_map_settings();
         </ScriptCode>
     </Element>
     <Element Type="FunctionCall" Id="D63C816B">
