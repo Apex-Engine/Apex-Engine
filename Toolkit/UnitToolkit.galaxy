@@ -1,45 +1,45 @@
-void libcrtx_toolkit_default_initunittools()
+void libapex_toolkit_default_initunittools()
 {
-    libcrtx_toolkit_setmaxlevel(20);
-    libcrtx_toolkit_setlevelbehavior("Levels");
-    libcrtx_toolkit_setexperiencegiverbehavior("GiveExperience");
+    libapex_toolkit_setmaxlevel(20);
+    libapex_toolkit_setlevelbehavior("Levels");
+    libapex_toolkit_setexperiencegiverbehavior("GiveExperience");
 	
 	
-    libcrtx_toolkit_setdamagebehavior("IncreaseDamage1",1);
-	libcrtx_toolkit_setdamagebehavior("IncreaseDamage10",2);
-	libcrtx_toolkit_setdamagebehavior("IncreaseDamage100",3);
-	libcrtx_toolkit_setdamagebehavior("IncreaseDamage1000",4);
+    libapex_toolkit_setdamagebehavior("IncreaseDamage1",1);
+	libapex_toolkit_setdamagebehavior("IncreaseDamage10",2);
+	libapex_toolkit_setdamagebehavior("IncreaseDamage100",3);
+	libapex_toolkit_setdamagebehavior("IncreaseDamage1000",4);
 	
-	libcrtx_toolkit_setdamagebehavior("DecreaseDamage1",5);
-	libcrtx_toolkit_setdamagebehavior("DecreaseDamage10",6);
-	libcrtx_toolkit_setdamagebehavior("DecreaseDamage100",7);
-	libcrtx_toolkit_setdamagebehavior("DecreaseDamage1000",8);
+	libapex_toolkit_setdamagebehavior("DecreaseDamage1",5);
+	libapex_toolkit_setdamagebehavior("DecreaseDamage10",6);
+	libapex_toolkit_setdamagebehavior("DecreaseDamage100",7);
+	libapex_toolkit_setdamagebehavior("DecreaseDamage1000",8);
 
-	libcrtx_toolkit_setrangebehavior("IncreaseRange1",1);
-	libcrtx_toolkit_setrangebehavior("IncreaseRange10",2);
+	libapex_toolkit_setrangebehavior("IncreaseRange1",1);
+	libapex_toolkit_setrangebehavior("IncreaseRange10",2);
 	
-	libcrtx_toolkit_setrangebehavior("DecreaseRange1",4);
-	libcrtx_toolkit_setrangebehavior("DecreaseRange10",5);
+	libapex_toolkit_setrangebehavior("DecreaseRange1",4);
+	libapex_toolkit_setrangebehavior("DecreaseRange10",5);
 
-	libcrtx_toolkit_setarmorbehavior("IncreaseLifeArmorP1",1);
-	libcrtx_toolkit_setarmorbehavior("IncreaseLifeArmor1",2);
-	libcrtx_toolkit_setarmorbehavior("IncreaseLifeArmor10",3);
-	libcrtx_toolkit_setarmorbehavior("IncreaseShieldArmorP1",4);
-	libcrtx_toolkit_setarmorbehavior("IncreaseShieldArmor1",5);
-	libcrtx_toolkit_setarmorbehavior("IncreaseShieldArmor10",6);
-	libcrtx_toolkit_setarmorbehavior("DecreaseLifeArmorP1",7);
-	libcrtx_toolkit_setarmorbehavior("DecreaseLifeArmor1",8);
-	libcrtx_toolkit_setarmorbehavior("DecreaseLifeArmor10",9);
-	libcrtx_toolkit_setarmorbehavior("DecreaseShieldArmorP1",10);
-	libcrtx_toolkit_setarmorbehavior("DecreaseShieldArmor1",11);
-	libcrtx_toolkit_setarmorbehavior("DecreaseShieldArmor10",12);
+	libapex_toolkit_setarmorbehavior("IncreaseLifeArmorP1",1);
+	libapex_toolkit_setarmorbehavior("IncreaseLifeArmor1",2);
+	libapex_toolkit_setarmorbehavior("IncreaseLifeArmor10",3);
+	libapex_toolkit_setarmorbehavior("IncreaseShieldArmorP1",4);
+	libapex_toolkit_setarmorbehavior("IncreaseShieldArmor1",5);
+	libapex_toolkit_setarmorbehavior("IncreaseShieldArmor10",6);
+	libapex_toolkit_setarmorbehavior("DecreaseLifeArmorP1",7);
+	libapex_toolkit_setarmorbehavior("DecreaseLifeArmor1",8);
+	libapex_toolkit_setarmorbehavior("DecreaseLifeArmor10",9);
+	libapex_toolkit_setarmorbehavior("DecreaseShieldArmorP1",10);
+	libapex_toolkit_setarmorbehavior("DecreaseShieldArmor1",11);
+	libapex_toolkit_setarmorbehavior("DecreaseShieldArmor10",12);
 
-	libcrtx_toolkit_setperiodbehavior("SetAttackSpeed0P9", 0);
-	libcrtx_toolkit_setperiodbehavior("SetAttackSpeed1P1", 1);
+	libapex_toolkit_setperiodbehavior("SetAttackSpeed0P9", 0);
+	libapex_toolkit_setperiodbehavior("SetAttackSpeed1P1", 1);
 }
 
-void libcrtx_toolkit_default_initrestrictedunits()
+void libapex_toolkit_default_initrestrictedunits()
 {
-	libcrtx_toolkit_addrestrictedunit("Spawner");
-	libcrtx_toolkit_addrestrictedunit("nukenoodle");
+	libapex_toolkit_addrestrictedunit("Spawner");
+	libapex_toolkit_addrestrictedunit("nukenoodle");
 }
