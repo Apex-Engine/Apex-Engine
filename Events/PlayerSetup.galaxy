@@ -1,1 +1,32 @@
-
+void libapex_event_playersetup()
+{
+    int i = 0; 
+    while(i < libapex_max_players)
+    {
+        if( !PlayerGroupHasPlayer(PlayerGroupActive(), i) ) {
+            i += 1;
+            continue;
+        }
+        PlayerSetState(i, c_playerStateFidgetingEnabled, false);
+        i += 1;
+    }
+    
+    i = 0;
+    while(i < libapex_max_players)
+    {
+        if( PlayerType(i) != c_playerTypeUser ) {
+            i += 1;
+            continue;
+        }
+        
+        if( libapex_cortexid_has_playerflag(i, c_cortexIdPlayerFlagPrefersSpawnerUnit) ) {
+            libNtve_gf_CreateUnitsAtPoint2(1, "Spawner", 0, i, RegionGetCenter(RegionEntireMap()));
+           
+            UnitControlGroupAddUnit(i, 1, UnitLastCreated());
+        }
+        
+        TechTreeRequirementsEnable(i, false);
+                
+        CameraPan(i, RegionGetCenter(RegionEntireMap()), 2.0, -1, 10, false);
+        i += 1;
+    }
