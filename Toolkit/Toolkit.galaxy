@@ -1,0 +1,8 @@
+include "Apex/Toolkit/ToolkitStorage.galaxy"
+include "Apex/Toolkit/XethyrUnitFormations.galaxy"
+include "Apex/Toolkit/DefaultToolkit/DefaultToolkit.galaxy"
+
+
+void libcrtx_toolkit_init()
+{
+	libcrtx_toolkit_default_init();
