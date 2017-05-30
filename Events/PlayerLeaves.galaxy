@@ -1,4 +1,4 @@
-	void libapex_event_playerleaves(bool runConditions, bool runActions)
+	void libapex_event_playerleaves(void runConditions, void runActions)
 {
 
 playergroup actives = PlayerGroupActive();
