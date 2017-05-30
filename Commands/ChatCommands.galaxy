@@ -1,3 +1,5 @@
+// libapex_command_rename
+// rename(@setname)
 void libapex_command_rename(int user, unitgroup u, string argv) {
 	string name = argv;
 	name = StringSub( name, StringFind(name, " ", c_stringCase) + 1, StringLength(name) ); // remainder of chat message
