@@ -1,4 +1,4 @@
-bool libapex_event_playermousemoves(bool runConditions, bool runActions)
+void libapex_event_playermousemoves(void runConditions, void runActions)
 {
 	libapex_mouse_positions[EventPlayer()] = Point( EventMouseMovedPosXWorld(), EventMouseMovedPosYWorld() );
 	PointSetHeight(libapex_mouse_positions[EventPlayer()], EventMouseMovedPosZWorld());
