@@ -1,0 +1,15 @@
+void libapex_command_rename(int user, unitgroup u, string argv) {
+	string name = argv;
+	name = StringSub( name, StringFind(name, " ", c_stringCase) + 1, StringLength(name) ); // remainder of chat message
+
+	UnitGroupLoopBegin(u);
+	while(!UnitGroupLoopDone()) {
+		libapex_unit_set_name(name, UnitGroupLoopCurrent());
+		libapex_print_output(user, "Unit [ID: " + libapex_unit_id(UnitGroupLoopCurrent()) + "] name set to: " + name);
+		libapex_unit_cache_update(UnitGroupLoopCurrent(), "@rename", argv);
+		UnitGroupLoopStep();
+	}
+	UnitGroupLoopEnd();
+
+	return;
+}
