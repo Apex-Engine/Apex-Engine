@@ -1,0 +1,7 @@
+// special data entries used for certain commands
+
+
+
+// used for unit chat related commands
+const string libapex_TALK_ICON_ACTOR = "TalkIconBubble";
+const string libapex_TALK_SOUND = "";
