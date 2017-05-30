@@ -44,3 +44,17 @@ void libapex_command_say(int user, unitgroup u, string argv) {
 
 	return;
 }
+// libapex_command_narrate
+// ====================
+// just prints out a line of text to everyone
+void libapex_command_narrate(int user, unitgroup u, string argv) {
+	string msg = argv;
+	msg = StringSub( msg, StringFind(msg, " ", c_stringCase) + 1, StringLength(msg) ); // remainder of chat message
+
+	libapex_print(PlayerGroupAll(), libapex_string_trim(msg));
+
+	// log msg in chatlog
+	libapex_log(user, StringToText(""), msg);
+
+	return;
+}
