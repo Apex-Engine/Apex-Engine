@@ -1,4 +1,4 @@
-	bool libapex_event_playerleaves(bool runConditions, bool runActions)
+	void libapex_event_playerleaves(bool runConditions, bool runActions)
 {
 
 playergroup actives = PlayerGroupActive();
@@ -23,12 +23,12 @@ playergroup actives = PlayerGroupActive();
 			return true;
 		}
 		player = PlayerGroupPlayer( active_players, RandomInt(1, PlayerGroupCount(active_players)) );
-		libapex_player[player].permission_level = LIBapex_PERMISSIONS_LEVEL_ADMIN;
+		libapex_player[player].permission_level = LIBAPEX_PERMISSIONS_LEVEL_ADMIN;
 		libapex_print_text(PlayerGroupAll(), libapex_player_name_colored(player) + StringToText(" has been promoted to admin"));
 	}
 
-	else if( libapex_player[EventPlayer()].permission_level == LIBapex_PERMISSIONS_LEVEL_MOD ) {
-		libapex_player[EventPlayer()].permission_level = LIBapex_PERMISSIONS_LEVEL_DEFAULT;
+	else if( libapex_player[EventPlayer()].permission_level == LIBAPEX_PERMISSIONS_LEVEL_MOD ) {
+		libapex_player[EventPlayer()].permission_level = LIBAPEX_PERMISSIONS_LEVEL_DEFAULT;
 	}
 
 	return true;
