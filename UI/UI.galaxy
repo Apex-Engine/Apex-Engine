@@ -1,7 +1,7 @@
 
 static const string LIBAPEX_DATA_TABLE_CHATLOG_FILTER = "ui_chatlog_filter ";
 
-// indent used for chatlog msg that are part of a previous msg
+
 static const string LIBAPEX_UI_CHATLOG_INDENT = "              ";
 
 // number of players on the filter list
@@ -13,9 +13,6 @@ static int[LIBAPEX_MAX_PLAYERS] libapex_ui_chatlog_filter_list;
 
 // actual flags for whether a player's messages in chatlog are to be filtered
 // format for array is [Player][Flag], where flag is the player int of the
-// target player for filtering.
-// False (default) - not filtered
-// True - filtered (msg does not appear in chat log)
 static bool[LIBAPEX_MAX_PLAYERS][LIBAPEX_MAX_PLAYERS] libapex_chatlog_filter;
 
 // dialog for the chat log
