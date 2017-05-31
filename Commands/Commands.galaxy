@@ -1,22 +1,135 @@
-//=========================================================
-//		Apex Roleplay Engine
-//		Copyright (c) 2017 , Serobliss / @Joshykins
+/=========================================================
+//		Apex Roleplaying Engine
+//		Copyright (c) 2017 , Serobliss [NA] / @joshykins <---- when seros name's on this but he's done nothnig lol ggwpnore
 //=========================================================
 // This software is distributed under the MIT License:
 // <http://opensource.org/licenses/MIT>
 //=========================================================
 
-include "apex/commands/general_commands.galaxy"
-include "apex/commands/admin_commands.galaxy"
-include "apex/commands/spawn_commands.galaxy"
-include "apex/commands/unit_commands.galaxy"
-include "apex/commands/actor_commands.galaxy"
-include "apex/commands/chat_commands.galaxy"
-include "apex/commands/region_commands.galaxy"
-include "apex/commands/debug_commands.galaxy"
+include "apexern/commands/general_commands.galaxy"
+include "apexern/commands/admin_commands.galaxy"
+include "apexern/commands/spawn_commands.galaxy"
+include "apexern/commands/unit_commands.galaxy"
+include "apexern/commands/actor_commands.galaxy"
+include "apexern/commands/chat_commands.galaxy"
+include "apexern/commands/region_commands.galaxy"
+
+
 void libapex_commands_initialize() {
-  //admin
-  //general
-  //actor
-  //region
-}
+
+  
+void libapex_commands_init() {
+
+libapex_command_create("_commands", libapex_command_list_commands);
+
+
+libapex_command_create("_zoom", "libapex_command_zoom")
+libapex_command_create("_colors", "libapex_command_colors")
+libapex_command_create("_stealhost ", "libapex_command_stealhost")
+libapex_command_create("_roll", "libapex_command_roll")
+libapex_command_create("_search", "libapex_command_search")
+libapex_command_create("_info", "libapex_command_info")
+libapex_command_create("_gamesetup", "libapex_command_gamesetup")
+libapex_command_create("_ui", "libapex_command_ui")
+libapex_command_create("_sound", "libapex_command_sound")
+libapex_command_create("_alias", "libapex_command_alias")
+libapex_command_create("_camera", "libapex_command_camera")
+libapex_command_create("_delay", "libapex_command_delay")
+libapex_command_create("_upgrade","libapex_command_upgrade")
+libapex_command_create("_camera", "libapex_command_camera")
+libapex_command_create("_creep", "libapex_command_creep") 
+libapex_command_create("_control", "libapex_command_control")
+libapex_command_create("_togglespawner", "libapex_command_togglespawner")
+libapex_command_create("_permissions", "libapex_command_permissions")
+libapex_command_create("_blacklist", "libapex_command_blacklist")
+libapex_command_create("_ally", "libapex_command_ally")
+libapex_command_create("_unally", "libapex_command_unally")
+libapex_command_create("_log", "libapex_command_log")
+libapex_command_create("_repeat", "libapex_command_repeat")
+libapex_command_create("_replace", "libapex_command_replace")
+//Region
+libapex_command_create("#list", "libapex_command_list")
+libapex_command_create("#create", "libapex_command_create")
+libapex_command_create("#teleport", "libapex_command_teleport")
+libapex_command_create("#remove", "libapex_command_remove"")
+libapex_command_create("#attach", "libapex_command_attach")
+libapex_command_create("#reveal", "libapex_command_reveal")
+libapex_command_create("#select","libapex_command_select")
+libapex_command_create("@order","libapex_command_order") //#order or @order?
+
+//Admin Commands
+
+libapex_command_create("!light","libapex_command_!light")
+libapex_command_create("!disable","libapex_command_!disable")
+libapex_command_create("!givehost","libapex_command_!givehost")
+
+libapex_command_create("!enable","libapex_command_!enable")
+libapex_command_create("!promote","libapex_command_!promote")
+libapex_command_create("!cameralock","libapex_command_cameralock")
+libapex_command_create("!demote","libapex_command_demote")
+libapex_command_create("!soundtrack","libapex_command_soundtrack")
+libapex_command_create("!forceban","libapex_command_forceban")
+libapex_command_create("!ban","libapex_command_ban")
+Libapex_command_cre	ate("!fog","libapex_command_fog")
+libapex_command_create("!trolls",".") //useless
+libapex_command_create("!remove","libapex_command_remove")
+//Stat
+
+
+libapex_command_create("@regen,"libapex_command_regen")
+libapex_command_create("@max","libapex_command_max")
+
+libapex_command_create("@armor","libapex_command_armor")
+libapex_command_create("@stat ","libapex_command_stat")
+libapex_command_create("@level","libapex_command_level")
+libapex_command_create("@range ","libapex_command_range")
+//Unit
+libapex_command_create("@spawn","libapex_command_spawn")
+libapex_command_create("@remove","libapex_command_remove")
+libapex_command_create("@damage","libapex_command_damage")
+libapex_command_create("@weapon","libapex_command_weapon")
+libapex_command_create("@weaponspeed","weaponspeed")
+libapex_command_create("@removearea","removearea")
+libapex_command_create("@decal","libapex_command_decal")
+libapex_command_create("@effect","libapex_command_effect")
+libapex_command_create("@height","libapex_command_height")
+libapex_command_create("@unselect","libapex_command_unselect")
+libapex_command_create("@speed","libapex_command_speed")
+libapex_command_create("@face","libapex_command_face")
+libapex_command_create("@give","libapex_command_give")
+libapex_command_create("@pos","libapex_command_position")
+libapex_command_create("@tooltip","libapex_command_tooltip")
+libapex_command_create("@level","libapex_command_level")
+libapex_command_create("@stock","libapex_command_stock")
+libapex_command_create("@pause","libapex_command_pause")
+libapex_command_create("@vulnerability","libapex_command_vulnerablitiy")
+libapex_command_create("@label","libapex_command_label")
+libapex_command_create("@renameall","libapex_command_renameall")
+libapex_command_create("@rename","libapex_command_rename")
+libapex_command_create("@subtitle","libapex_command_subtitle")
+libapex_command_create("@view","libapex_command_view")
+libapex_command_create("@statbars","libapex_command_statbars")
+libapex_command_create("@rotate","libapex_command_rotate")
+libapex_command_create("@anim","libapex_command_anim")
+libapex_command_create("@order","libapex_command_order")
+libapex_command_create("@say","libapex_command_say")
+libapex_command_create("@form","libapex_command_form")
+
+libapex_command_create("@radius","libapex_command_radius")
+libapex_command_create("@unitmsg","libapex_command_unitmsg")
+libapex_command_create("@behavior","libapex_command_behavior")
+//actor commands
+libapex_command_create("@attach-","libapex_command_attach-") //lolk
+libapex_command_create("@attach","libapex_command_attach")
+libapex_command_create("@rotation","libapex_command_rotation")
+libapex_command_create("@removeprops","libapex_command_removeprops")
+libapex_command_create("@modelswap","libapex_command_modelswap")
+libapex_command_create("@scale","libapex_command_scale")
+libapex_command_create("@play","libapex_command_play")
+libapex_command_create("@create","libapex_command_create")
+libapex_command_create("@actrmsg","libapex_command_actrmsg")
+libapex_command_create("@actoralias","libapex_command_actoralias")
+libapex_command_create("@tint","libapex_command_tint")
+libapex_command_create("@undo","libapex_command_undo")
+libapex_command_create("@actrmsg","libapex_command_actrmsg")
+libapex_command_create("@color","libapex_command_color")
