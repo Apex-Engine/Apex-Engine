@@ -1,3 +1,12 @@
+
+
+
+
+//Pulling all numbers from forge and wyvern for left side UI
+//Making this for aliases is also uh really sick btw
+//Good thing all this won't matter because I'm pretty sure none of u fuks will even open this 
+
+
 static int libapex_ui_modelpreview_list;
 static int libapex_ui_modelpreview_rotl_btn;
 static int libapex_ui_modelpreview_rotr_btn;
