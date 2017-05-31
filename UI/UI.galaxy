@@ -110,7 +110,7 @@ static void libapex_ui_chatlog_populate(int player) {
 
 		i = (i + 1) % LIBAPEX_NLOGGED_MSG;
 	}
-
+ 
 }
 
 // libapex_ui_chatlog_filter_toggle
