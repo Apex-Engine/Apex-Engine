@@ -1,0 +1,10 @@
+//I literally copy-pasted this from Wyvern and have no idea how to test if it works or not.
+//But, in theory, this is the @Remove command.
+void libwyv_command_remove(int user, unitgroup u, string argv) {
+	UnitGroupLoopBegin(u);
+	while(!UnitGroupLoopDone()) {
+		UnitRemove(UnitGroupLoopCurrent());
+		UnitGroupLoopStep();
+	}
+	UnitGroupLoopEnd();
+}
